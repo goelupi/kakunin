@@ -31,12 +31,16 @@ body {
 }
 
 header {
+  background-color: rgba(164,58,1,0.5);
+  width: 1600px;
   max-width: 100%;
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #000000 ;
+  position: fixed;
+  top: 0;
 }
 
 .header-left {
@@ -78,7 +82,7 @@ header li {
   padding: 20px 40px;
 }
 
-.toggle-menu {
+.toggle-menu-button {
   display: none;
 }
 
@@ -88,6 +92,7 @@ header li {
   width: 100%;
   background-position: center center; 
   background-size: cover;
+  margin-top:80px ;
 }
 
 #mainvisual p {
@@ -102,7 +107,7 @@ header li {
   white-space: nowrap;
   overflow: hidden;
   animation: jojo 4s;
-  animation-delay: 4s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
 }
 
@@ -133,7 +138,11 @@ width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-top: 60px;
+margin-top: 60px; 
+opacity: 0;
+animation-name: fadein;
+animation-duration: 3s;
+animation-fill-mode: forwards;
 }
 
 h2 {
@@ -159,6 +168,7 @@ h2 {
 .menu-contena {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .menu-box {
@@ -170,19 +180,19 @@ h2 {
   opacity: 0;
 }
 
-.menu-box :first-child{
+.menu-box:first-child {
   animation-name: hidarikara;
   animation-delay: 2s;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
-.menu-box :nth-child(2) {
+.menu-box:nth-child(2) {
   animation-name: hidarikara;
   animation-delay: 4s;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
-.menu-box :nth-child(3) {
+.menu-box:nth-child(3) {
   animation-name: hidarikara;
   animation-delay: 6s;
   animation-duration: 2s;
@@ -190,14 +200,14 @@ h2 {
 }
 
 @keyframes hidarikara {
-  from{
+  from {
     opacity: 0;
-    transform: translateY(30px)
+    transform: translateY(30px);
   }
 
   to {
     opacity: 1;
-    transform: translate(0)
+    transform: translateY(0);
   }
 }
 .menu-box dl {
@@ -212,4 +222,116 @@ h2 {
   height: 120px;
   border: #000000 solid 3px;
   border-radius: 8px;
+}
+
+#access {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+iframe {
+  border: 3px solid #000000;
+  border-radius: 8px;
+}
+
+.access-info {
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+address {
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+#access p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+footer img {
+  width: 220px;
+  height: 220px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  border-top: #000000 solid 1px;
+}
+
+ul {
+  text-align: center;
+  font-weight: bold;
+}
+
+li {
+  padding-top: 30px;
+  padding-right: 20px;
+}
+
+@media (max-width: 800px) {
+
+  header ul {
+    display: block;
+    text-align: center;
+    }
+
+  .header-site-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    background-color: #736e62;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    display: none;
+  }
+
+  .header-site-menu.is-show{
+    display: block;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+
+  .toggle-menu-button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../img/button.png);
+    background-size: cover;
+
+  }
+
+  .menu-contena {
+    display: block;
+  }
+
+  iframe {
+    width: 400px;
+    height: 300px;
+  }
 }
