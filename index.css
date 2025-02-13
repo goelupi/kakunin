@@ -87,7 +87,7 @@ header li {
 }
 
 #mainvisual {
-  background-image: url(../img/cafe201261763_TP_V.jpg);
+  background-image: url(./img/cafe201261763_TP_V.jpg);
   height: calc(100vh - 80px) ;
   width: 100%;
   background-position: center center; 
@@ -321,7 +321,7 @@ li {
     height: 40px;
     background-color: transparent;
     border: none;
-    background-image: url(../img/button.png);
+    background-image: url(./img/button.png);
     background-size: cover;
 
   }
